@@ -3,16 +3,16 @@ CREATE TABLE users
   id INT(11) NOT NULL
   AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR
-  (100) DEFAULT '不明' NOT NULL,
+  (100) DEFAULT '' NOT NULL,
   mail VARCHAR
-  (100) DEFAULT '不明' NOT NULL,
+  (100) DEFAULT '' NOT NULL,
   password VARCHAR
-  (100) DEFAULT '不明' NOT NULL,
+  (100) DEFAULT '' NOT NULL,
   work_tell CHAR
   (13),
   my_tell CHAR
   (13),
-  comment TEXT
+  profile TEXT
   (1000),
   is_deleted TINYINT
   (1) DEFAULT 0 NOT NULL,
@@ -30,13 +30,13 @@ CREATE TABLE users
   updated_user_id INT
     (11) NOT NULL REFERENCES users
     (id),
-  chat_name VARCHAR
-    (100) DEFAULT 'チャット' NOT NULL,
-  chat_view TEXT
+  name VARCHAR
+    (100) DEFAULT '' NOT NULL,
+  description TEXT
     (1000),
-  file_permit TINYINT
+  is_permit_file TINYINT
     (1) DEFAULT 0 NOT NULL,
-  direct_chat TINYINT
+  is_direct_chat TINYINT
     (1) DEFAULT 0 NOT NULL,
   is_deleted TINYINT
     (1) DEFAULT 0 NOT NULL,
@@ -70,9 +70,9 @@ CREATE TABLE users
   update_user_id INT
         (11) NOT NULL REFERENCES users
         (id),
-  post TEXT
+  contents TEXT
         (1000) NOT NULL,
-  file VARCHAR
+  attachment_file_name VARCHAR
         (100),
   is_deleted TINYINT
         (1) DEFAULT 0 NOT NULL,
@@ -99,7 +99,7 @@ task_user_id INT
 description TEXT
           (1000) NOT NULL,
 deadline DATETIME,
-is_checked TINYINT
+is_completed TINYINT
           (1) DEFAULT 0 NOT NULL,
 is_deleted TINYINT
           (1) DEFAULT 0 NOT NULL,
