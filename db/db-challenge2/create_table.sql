@@ -48,7 +48,7 @@ CREATE TABLE users
     (
       id INT(11) NOT NULL
       AUTO_INCREMENT PRIMARY KEY,
-  chat_id INT
+  chat_room_id INT
       (11) NOT NULL REFERENCES chatrooms
       (id),
   user_id INT
@@ -61,7 +61,7 @@ CREATE TABLE users
       (
         id INT(11) NOT NULL
         AUTO_INCREMENT PRIMARY KEY,
-  chat_id INT
+  chat_room_id INT
         (11) NOT NULL REFERENCES chatrooms
         (id),
   post_user_id INT
@@ -84,7 +84,7 @@ CREATE TABLE users
         (
           id INT(11) NOT NULL
           AUTO_INCREMENT PRIMARY KEY,
-  chat_id INT
+  chat_room_id INT
           (11) NOT NULL REFERENCES chatrooms
           (id),
   created_user_id INT
@@ -106,4 +106,3 @@ is_deleted TINYINT
 created_at DATETIME NOT NULL,
 updated_at DATETIME NOT NULL
 );
-
