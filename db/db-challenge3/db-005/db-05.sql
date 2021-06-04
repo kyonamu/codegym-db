@@ -1,5 +1,5 @@
 INSERT INTO tasks
-  (chat_id,description,deadline,task_user_id,is_completed,is_deleted,created_user_id,update_user_id,created_at,updated_at)
+  (chat_room_id,description,deadline,task_user_id,is_completed,is_deleted,created_user_id,update_user_id,created_at,updated_at)
 VALUES
   (1, '利用規約をアップロードする', '2020-04-21 14:00:00', 1, 1, 0, 1, 1, '2020-04-21 11:30:55', '2020-04-21 13:13:20'),
   (1, '利用規約の確認', NULL, 5, 0, 0, 1, 4, '2020-04-21 14:02:21', '2020-04-22 18:52:20'),
@@ -9,6 +9,3 @@ VALUES
   (5, '投稿が見えるかチェック', NULL, 2, 0, 0, 1, 1, '2020-04-26 09:21:58', '2020-04-26 09:21:58'),
   (6, '投稿が見えるかチェック', NULL, 3, 0, 0, 1, 1, '2020-04-26 11:22:44', '2020-04-26 11:22:44'),
   (7, '投稿が見えるかチェック', NULL, 10, 0, 0, 1, 1, '2020-04-26 13:23:50', '2020-04-26 13:23:50');
-
-
-
