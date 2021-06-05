@@ -1,4 +1,6 @@
-SELECT u.name as ユーザー名, p.created_at as 投稿日時, c.name as チャットルーム名
+SELECT u.name as ユーザー名,
+  p.created_at as 投稿日時,
+  c.name as チャットルーム名
 FROM posts as p
   JOIN users as u
   ON p.post_user_id=u.id
