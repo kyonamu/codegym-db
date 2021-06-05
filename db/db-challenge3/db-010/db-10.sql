@@ -8,7 +8,7 @@ FROM posts as p
   ON p.chat_room_id=c.id
 WHERE u.is_deleted=0 AND p.is_deleted=0 AND
   p.created_at IN (
-SELECT max(p.created_at)
+  SELECT max(p.created_at)
   FROM posts as p
     JOIN chatrooms as c
     ON p.chat_room_id=c.id
